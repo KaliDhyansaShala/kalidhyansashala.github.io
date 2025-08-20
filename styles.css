@@ -54,11 +54,22 @@ hero-blog{background-image:url('https://images.unsplash.com/photo-1496307042754-
 .card{background:var(--paper);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
 
 /* Split layout */
-split{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-.split-media img{border-radius:12px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.split-text, .split-media{min-width:280px}
+.split-media img{
+  width:100%;
+  height:auto;
+  max-width:600px;
+  max-height:450px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.15);
+  margin:auto;
+  display:block;
+}
 
 /* Grids */
-feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
 .shop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .shop-card img{width:100%;height:180px;object-fit:cover;border-radius:10px}
